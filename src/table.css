@@ -1,0 +1,106 @@
+table {
+    width: 50vw;
+}
+thead {
+    background: #86fcb3;
+    color: #333;
+    font-weight: bolder;
+}
+tbody{
+    background: #333;
+}
+
+
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 30px;
+    position: absolute;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: #000000e7;
+    top: 0px;
+    left: 0px;
+}
+.delete {
+    background: none;
+    color: #fd6969;
+    border: none;
+}
+.delete:hover {
+    color: #ff2222;
+}
+.Admin {
+    background: none;
+    color: #00ff8080;
+    border: none;
+    position: relative;
+    outline: none;
+}
+.status {
+    background: none;
+    color: #5f5f5f;
+    border: none;
+    outline: none;
+    position: relative;
+}
+.status:hover {
+    color: hsl(147, 100%, 50%);
+}
+.status::after {
+    content: 'Make Admin';
+    background: #b7ffc3; 
+    font-size: 13px;
+    position: absolute;
+    padding: 5px;
+    display: none;
+    margin-left: -22px;
+    margin-top: -45px;
+    width: 90px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 3px #0000004d;
+    transition: all 0.1s ease-in-out;
+}
+.status:hover::after {
+    color: #333;
+    display: block;
+    transition: all 0.1s ease-in-out;
+}
+
+.createUser {
+    /* position: relative; */
+    background: #333;
+    height: 40px;
+    display: flex;
+}
+.createUser div {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 2px;
+}
+.createUser div input {
+    outline: unset;
+    border: unset;
+    padding: 10px;
+    transition: all 0.1s ease-in-out;
+}
+.error {
+    border: 1px solid #fd6969 !important;
+}
+
+.error::placeholder {
+    color: #fd6969;
+}
+.createUser button {
+    outline: none;
+    border: unset;
+    flex-grow: 1;
+    background: #00ff625b;
+    color: #fff;
+    margin-right: 2px;
+    font-weight: bolder;
+    border-radius: unset;
+}
