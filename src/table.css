@@ -10,8 +10,12 @@ tbody{
     background: #333;
 }
 
-
+.button{
+    box-shadow: 1px 1px 5px 3px #00ffaa2c;
+    background: #00ffaa2c;
+}
 .loader {
+    z-index: 200;
     display: flex;
     align-items: center;
     justify-content: center;

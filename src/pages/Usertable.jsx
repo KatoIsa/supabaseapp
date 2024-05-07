@@ -4,6 +4,7 @@ import "../App.css";
 import { connection } from "../createClient";
 import { useState } from "react";
 import "../table.css";
+import { Link } from "react-router-dom";
 
 function UserTable() {
   // fetch data from supaBase ....
@@ -82,8 +83,7 @@ function UserTable() {
   return (
     <>
       {loader ? <div className="loader">Loading data ....</div> : null}
-
-      <h2 style={{marginTop: -100, marginBottom: 100}}>Testing SupaBase</h2>
+      <h2 style={{ marginTop: -100, marginBottom: 100 }}>Testing SupaBase</h2>
       <form onSubmit={createUser} className="createUser">
         <div>
           <input
@@ -125,9 +125,7 @@ function UserTable() {
               <td>{item.age}</td>
               <td>
                 {item.status ? (
-                  <button className="Admin">
-                    Admin
-                  </button>
+                  <button className="Admin">Admin</button>
                 ) : (
                   <button className="status" onClick={() => makeAdmin(item.id)}>
                     Normal
@@ -143,6 +141,12 @@ function UserTable() {
           ))}
         </tbody>
       </table>
+      <div style={{ marginTop: 60 }}></div>
+      <Link to='/login'>
+        <button className="button" style={{ border: "unset" }}>
+          Test Authentication
+        </button>
+      </Link>
     </>
   );
 }

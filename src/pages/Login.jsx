@@ -1,6 +1,7 @@
+import LoginForm from "../components/loginform"
 
 export const Login = () => {
     return <>
-    <h1>Login</h1>
+    <LoginForm />
     </>
 }
