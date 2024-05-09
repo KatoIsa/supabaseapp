@@ -21,9 +21,10 @@ function UserTable() {
   }, []);
 
   async function fetchUsers() {
-    const { data } = await connection.from("student").select("*");
+    const { error, data } = await connection.from("student").select("*");
     setStudents(data);
     setLoader(false);
+    console.log(error);
   }
 
   async function createUser(e) {
